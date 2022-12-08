@@ -94,7 +94,7 @@ function adrotate_insert_input() {
 		if(isset($_POST['adrotate_schedule'])) $schedule_id = sanitize_key($_POST['adrotate_schedule']);
 		if(isset($_POST['adrotate_username'])) $author = sanitize_key($_POST['adrotate_username']);
 		if(isset($_POST['adrotate_title'])) $title = sanitize_text_field($_POST['adrotate_title']);
-		if(isset($_POST['adrotate_bannercode'])) $bannercode = htmlspecialchars(trim($_POST['adrotate_bannercode']), ENT_QUOTES);
+		if(isset($_POST['adrotate_bannercode'])) $bannercode = trim($_POST['adrotate_bannercode']);
 		$thetime = current_time('timestamp');
 		if(isset($_POST['adrotate_active'])) $active = strip_tags(trim($_POST['adrotate_active']));
 
@@ -278,8 +278,8 @@ function adrotate_insert_group() {
 		if(isset($_POST['adrotate_page_paragraph'])) $page_par = sanitize_key($_POST['adrotate_page_paragraph']);
 
 		$wrapper_before = $wrapper_after = '';
-		if(isset($_POST['adrotate_wrapper_before'])) $wrapper_before = htmlspecialchars(trim($_POST['adrotate_wrapper_before']), ENT_QUOTES);
-		if(isset($_POST['adrotate_wrapper_after'])) $wrapper_after = htmlspecialchars(trim($_POST['adrotate_wrapper_after']), ENT_QUOTES);
+		if(isset($_POST['adrotate_wrapper_before'])) $wrapper_before = trim($_POST['adrotate_wrapper_before']);
+		if(isset($_POST['adrotate_wrapper_after'])) $wrapper_after = trim($_POST['adrotate_wrapper_after']);
 
 		if(current_user_can('adrotate_group_manage')) {
 			if(strlen($name) < 1) $name = 'Group '.$id;
