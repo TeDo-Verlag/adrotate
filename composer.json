@@ -1,0 +1,11 @@
+{
+    "name": "tedo/adrotate",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "gguseynov",
+            "email": "gguseynov@tedo-verlag.de"
+        }
+    ],
+    "require": {}
+}
